@@ -1,0 +1,3 @@
+﻿  main.c
+S:\大二\大二下\数据结构C\stack\main.c(48,14): warning C4047: “return”:“T”与“void *”的间接级别不同
+  stack.vcxproj -> S:\大二\大二下\数据结构C\stack\x64\Debug\stack.exe
