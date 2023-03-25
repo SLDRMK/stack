@@ -71,10 +71,24 @@ int isempty(pStack p)
 int main()
 {
 	pStack stack = init();
-	push(&stack, 'x');
-	push(&stack, 'y');
-	printc(stack);
-	pop(&stack);
-	printc(stack);
+	char c = 0;
+	while ((c = getchar()) != '\n' && c != 'EOF')
+	{
+		if (c == '(')
+			push(&stack, c);
+		if (c == ')')
+		{
+			if (isempty(stack))
+			{
+				printf("0");
+				return 0;
+			}
+			pop(&stack);
+		}
+	}
+	if (isempty(stack))
+		printf("1");
+	else
+		printf("0");
 	return 0;
 }
